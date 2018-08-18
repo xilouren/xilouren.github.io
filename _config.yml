@@ -1,28 +1,101 @@
 # Site settings
-title:
-email:
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+title: AFei Blog
+SEOTitle: 阿飞的博客 | AFei Blog
+header-img: img/home-bg.jpg
+email: 就不告诉你@gmail.com
+description: "*********** | #########阿飞######### | 这里是 @AFei阿飞 的个人博客，与你一起发现更大的世界。"
+keyword: "阿飞, AFei阿飞, AFei, 鬼栈, AFei, @AFei, 阿飞的博客, AFei Blog, 博客, 个人网站, 互联网, Web"
+url: "https://yangfeifei.top"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-# User setting
-owner:
-email:
-facebook_username:
-twitter_username:
-github_username:
-address:
-  - line:
-  - line:
-  # Feel free to add more lines here 
-telephone:
-copyright:
+# Publish posts or collection documents with a future date.
+future: true
 
-# API settings
-google_api_key:
+# SNS settings
+RSS: false
+weibo_username:     AFeipro
+zhihu_username:     AFeipro
+github_username:    AFeipro
+twitter_username:   AFeipro
+#facebook_username:  AFeipro
+#linkedin_username:  firstname-lastname-idxxxx
+
+
 
 # Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+disqus_username: AFei
+
+# Netease settings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: yangfeifei.top
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/avatar-AFei-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+    #     title: "阿飞",
+    #     href: "http://yangfeifei.top/"
+    # },{
+        title: "AFei",
+        href: "http://yangfeifei.top/"
+    }
+]
